@@ -20,3 +20,21 @@ document.addEventListener("click", function () {
 for (let hint of infoHints) {
   hint.addEventListener("click", (e) => e.stopPropagation());
 }
+
+// swiper slider
+
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  // direction: "vertical",
+  loop: true,
+  freemode: true,
+
+  slidesPerView: 4,
+  spaceBetween: 42,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: "#sliderNext",
+    prevEl: "#sliderPrev",
+  },
+});
