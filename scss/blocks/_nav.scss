@@ -6,8 +6,27 @@
 
 .nav__logo {
     align-self: center;
-    font-weight: 700;
-    font-size: 28px;
-    letter-spacing: 0.28px;
-    text-transform: capitalize;
+}
+
+.nav-list__link {
+    &--dropdown {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &::after {
+            content: url(../../img/icons/arrow-down.svg);
+            height: 18px;
+        }
+    } 
+}
+
+.nav-list__item {
+    position: relative;
+}
+
+.nav-list__sub-nav {
+    position: absolute;
+    left: 0;
+    top: 100%;
 }
