@@ -12,5 +12,5 @@
 
 ## Запуск
 
-1. Скопировать репозиторий с помощью git команды: `git clone http://127.0.0.1:5500/index.html#!`
+1. Скопировать репозиторий с помощью git команды: `git clone https://github.com/ibragim-ast/panto-furniture-store.git`
 2. Запустить index.html в любом браузере или запустить с помощью расширения VS Code "Live Server"
