@@ -558,11 +558,11 @@ html, body {
   align-items: center;
   color: var(--accent);
   font-weight: 500;
-  font-style: 14px;
+  font-size: 14px;
   line-height: 1.85;
 }
 .read-more::after {
-  content: url("../../img/icons/arrow-right.svg");
+  content: url("./../img/icons/arrow-right.svg");
   height: 24px;
 }
 .read-more--large {
