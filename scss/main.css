@@ -562,7 +562,7 @@ html, body {
   line-height: 1.85;
 }
 .read-more::after {
-  content: url(../../img/icons/arrow-right.svg);
+  content: url("../../img/icons/arrow-right.svg");
   height: 24px;
 }
 .read-more--large {
