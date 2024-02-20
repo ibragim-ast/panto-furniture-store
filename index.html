@@ -14,7 +14,9 @@
     <header class="header">
       <div class="container">
         <nav class="header__nav nav">
-          <div class="nav__logo"><a href="#" class="logo">Panto</a></div>
+          <div class="nav__logo">
+            <a href="#" class="logo">Panto</a>
+          </div>
 
           <ul class="nav-list">
             <li class="nav-list__item">
@@ -25,7 +27,11 @@
                 <ul class="sub-nav">
                   <li class="sub-nav__item">
                     <a href="#!" class="sub-nav__link">Beds</a>
+                  </li>
+                  <li class="sub-nav__item">
                     <a href="#!" class="sub-nav__link">Chair</a>
+                  </li>
+                  <li class="sub-nav__item">
                     <a href="#!" class="sub-nav__link">All</a>
                   </li>
                 </ul>
@@ -46,9 +52,13 @@
             <img class="cart__img" src="./img/icons/cart.svg" alt="" />
             <div class="cart__count">0</div>
           </a>
+
+          <button id="open-mobile-nav-btn" class="nav__btn">
+            <img src="./img/icons/mobile-nav.svg" alt="Open navigation" />
+          </button>
         </nav>
 
-        <div class="header__content none">
+        <div class="header__content">
           <h1 class="header__title">
             Make your interior more minimalistic & modern
           </h1>
@@ -56,25 +66,28 @@
             Turn your room with panto into a lot more minimalist and modern with
             ease and speed
           </p>
-          <form action="" class="header__search search-form">
-            <input
-              placeholder="Search furniture"
-              type="text"
-              class="search-form__input"
-              autocomplete="off"
-            />
-            <button class="search-form__btn">
-              <img src="./img/icons/search.svg" alt="Search" />
-            </button>
-          </form>
+
+          <div class="header__search">
+            <form action="" class="search-form">
+              <input
+                placeholder="Search furniture"
+                type="text"
+                class="search-form__input"
+                autocomplete="off"
+              />
+              <button class="search-form__btn">
+                <img src="./img/icons/search.svg" alt="Search" />
+              </button>
+            </form>
+          </div>
         </div>
 
-        <div class="header__dot-sofa none">
+        <div class="header__dot header__dot--sofa">
           <button class="info-dot">
             <div class="info-dot__circle"></div>
             <div class="info-dot__radius"></div>
           </button>
-          <div class="info-hint none">
+          <div class="info-hint">
             <label>
               <input class="info-hint__radio" type="radio" name="sofa-color" />
               <div
@@ -98,12 +111,12 @@
           </div>
         </div>
 
-        <div class="header__dot-vase none">
+        <div class="header__dot header__dot--vase">
           <button class="info-dot">
             <div class="info-dot__circle"></div>
             <div class="info-dot__radius"></div>
           </button>
-          <div class="info-hint none">
+          <div class="info-hint">
             <label>
               <input class="info-hint__radio" type="radio" name="sofa-color" />
               <div
@@ -127,12 +140,12 @@
           </div>
         </div>
 
-        <div class="header__dot-item none">
+        <div class="header__dot header__dot--item">
           <button class="info-dot">
             <div class="info-dot__circle"></div>
             <div class="info-dot__radius"></div>
           </button>
-          <div class="info-hint none">
+          <div class="info-hint">
             <label>
               <input class="info-hint__radio" type="radio" name="sofa-color" />
               <div
@@ -156,28 +169,28 @@
           </div>
         </div>
 
-        <div class="header__dot-wall none">
+        <div class="header__dot header__dot--wall">
           <button class="info-dot">
             <div class="info-dot__circle"></div>
             <div class="info-dot__radius"></div>
           </button>
           <div class="info-hint none">
             <label>
-              <input class="info-hint__radio" type="radio" name="sofa-color" />
+              <input type="radio" name="sofa-color" class="info-hint__radio" />
               <div
                 class="info-hint__radio-fake info-hint__radio-fake--orange"
               ></div>
             </label>
 
             <label>
-              <input class="info-hint__radio" type="radio" name="sofa-color" />
+              <input type="radio" name="sofa-color" class="info-hint__radio" />
               <div
                 class="info-hint__radio-fake info-hint__radio-fake--biruza"
               ></div>
             </label>
 
             <label>
-              <input class="info-hint__radio" type="radio" name="sofa-color" />
+              <input type="radio" name="sofa-color" class="info-hint__radio" />
               <div
                 class="info-hint__radio-fake info-hint__radio-fake--gray"
               ></div>
@@ -187,7 +200,7 @@
       </div>
     </header>
 
-    <section class="benefits none">
+    <section class="benefits">
       <div class="container">
         <div class="benefits__grid">
           <h2 class="benefits__title">Why Choosing Us</h2>
@@ -222,7 +235,7 @@
       </div>
     </section>
 
-    <section class="products none">
+    <section class="products">
       <div class="container">
         <h2 class="products__title">Best Selling Product</h2>
         <div class="products__tabs">
@@ -759,7 +772,7 @@
       </div>
     </section>
 
-    <footer class="footer none">
+    <footer class="footer">
       <div class="container container--small">
         <!-- footer__grid -->
         <div class="footer__grid">
@@ -805,6 +818,54 @@
         <!-- footer__row -->
       </div>
     </footer>
+
+    <!-- Mobile nav -->
+    <div id="mobile-nav" class="mobile-nav-wrapper">
+      <div class="mobile-nav-header">
+        <a href="#cart" class="mobile-cart">
+          <div class="cart">
+            <img class="cart__img" src="./img/icons/cart.svg" alt="" />
+            <div class="cart__count">0</div>
+          </div>
+          Cart
+        </a>
+
+        <button id="close-mobile-nav-btn" class="mobile-nav-btn-close">
+          <img src="./img/icons/close.svg" alt="Close navigation" />
+        </button>
+      </div>
+
+      <ul class="mobile-nav">
+        <li class="mobile-nav__item">
+          <a href="#!" class="mobile-nav__link mobile-nav__link--dropdown"
+            >Furniture</a
+          >
+
+          <ul class="mobile-sub-nav">
+            <li class="mobile-sub-nav__item">
+              <a href="#!" class="mobile-sub-nav__link">Beds</a>
+            </li>
+            <li class="mobile-sub-nav__item">
+              <a href="#!" class="mobile-sub-nav__link">Chair</a>
+            </li>
+            <li class="mobile-sub-nav__item">
+              <a href="#!" class="mobile-sub-nav__link">All</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#!" class="mobile-nav__link">Shop</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#!" class="mobile-nav__link">About Us</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#!" class="mobile-nav__link">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- // Mobile nav -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>

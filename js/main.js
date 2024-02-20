@@ -5,18 +5,27 @@ const infoHints = document.querySelectorAll(".info-hint");
 for (let btn of infoBtns) {
   btn.addEventListener("click", function (e) {
     e.stopPropagation();
+
+    // Hide all hint
+    for (let hint of infoHints) {
+      if (this.parentNode.querySelector(".info-hint") !== hint) {
+        hint.classList.add("none");
+      }
+    }
+
+    // Show current hint
     this.parentNode.querySelector(".info-hint").classList.toggle("none");
   });
 }
 
-// Закрываем подсказки при клике по всей странице
+// Закрываем подсказки при клике по всему документу
 document.addEventListener("click", function () {
   for (let hint of infoHints) {
     hint.classList.add("none");
   }
 });
 
-// запрещаем всплытие при клике на подсказки
+// Запрещаем всплытие события клика при клике на подсказки
 for (let hint of infoHints) {
   hint.addEventListener("click", (e) => e.stopPropagation());
 }
@@ -77,3 +86,16 @@ for (let btn of tabsBtns) {
     swiper.update();
   });
 }
+
+// Mobile Nav
+const mobileNavOpenBtn = document.querySelector("#open-mobile-nav-btn");
+const mobileNavCloseBtn = document.querySelector("#close-mobile-nav-btn");
+const mobileNav = document.querySelector("#mobile-nav");
+
+mobileNavOpenBtn.onclick = function () {
+  mobileNav.classList.add("mobile-nav-wrapper--open");
+};
+
+mobileNavCloseBtn.onclick = function () {
+  mobileNav.classList.remove("mobile-nav-wrapper--open");
+};

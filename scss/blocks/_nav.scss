@@ -8,42 +8,10 @@
     align-self: center;
 }
 
-.nav-list__link {
-    transition: opacity 0.1s ease-in;
+.nav__btn {
+    display: none;
 
-    &:hover {
-        opacity: 0.7;
+    @include tablet() {
+        display: block;
     }
-    &--dropdown {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-
-        &::after {
-            content: url(../../img/icons/arrow-down.svg);
-            height: 18px;
-        }
-    } 
-}
-
-.nav-list__item {
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.nav-list__sub-nav {
-    opacity: 0;
-    position: absolute;
-    pointer-events: none;
-    left: 0;
-    top: 100%;
-
-    transform: translate(0%, 10%);
-    transition: all 0.2s ease-in;
-}
-
-.nav-list__item:hover .nav-list__sub-nav {
-    opacity: 1;
-    transform: translate(0%, 0%);
-    pointer-events: all;
 }
