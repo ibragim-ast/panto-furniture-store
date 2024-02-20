@@ -437,7 +437,7 @@ html, body {
   padding-top: 12px;
   width: 112px;
   height: 56px;
-  background-image: url("../../img/icons/hint.svg");
+  background-image: url("./../img/icons/hint.svg");
 }
 
 .info-hint__radio {
@@ -452,7 +452,7 @@ html, body {
 }
 
 .info-hint__radio:checked + .info-hint__radio-fake {
-  background-image: url("../../img/icons/checkbox.svg");
+  background-image: url("./../img/icons/check-no-shadow.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
